@@ -130,7 +130,7 @@ const Sidebar = (params) => {
                             textAlign: "center",
                             alignItems: "center",
                             justifyContent: "center",
-                            bottom: "2px !important",
+                            bottom: "10px !important",
                             "& :hover": {
                                 cursor: "pointer"
                             }
@@ -262,7 +262,7 @@ const Sidebar = (params) => {
                                     // border: "1px solid white",
                                     borderRadius: "50%",
                                 }}
-                                src={user.img}
+                                src={user.img.img}
                             >
 
                             </Box>
