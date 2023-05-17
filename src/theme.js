@@ -116,11 +116,13 @@ export const themeSettings = (mode) => {
                         main: tokensDark.grey[500],
                     },
                     background: {
+                        // default: tokensDark.grey[0],
+                        // alt: tokensDark.grey[50],
                         default: tokensDark.grey[0],
-                        alt: tokensDark.grey[50],
+                        alt: tokensDark.secondary[50],
                     },
                     selectedItem: {
-                        default: tokensDark.red[10]
+                        default: tokensDark.red[0]
                     }
                 }),
         },
