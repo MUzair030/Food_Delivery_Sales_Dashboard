@@ -8,3 +8,5 @@ export { default as RestaurantsCard } from "./dashboardCards/RestaurantsCard";
 export { default as PaymentsCard } from "./dashboardCards/PaymentsCard";
 export { default as DeliveriesCard } from "./dashboardCards/DeliveriesCard";
 export { default as OrdersCard } from "./dashboardCards/OrdersCard";
+export { default as LoginForm } from "./LoginForm";
+export { default as SignupForm } from "./SignupForm";

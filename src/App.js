@@ -3,9 +3,8 @@ import {ThemeProvider, CssBaseline, createTheme} from "@mui/material";
 import { useSelector } from "react-redux";
 import { useMemo } from "react";
 import {Layout} from "./components";
-import {Dashboard} from "./pages";
+import {Dashboard, EditProfile, Auth } from "./pages";
 import {themeSettings} from "./theme";
-import EditProfile from "./pages/EditProfile";
 
 
 function App() {
@@ -19,8 +18,9 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
-            <Route element={ <Layout /> }>
-                <Route path="/" element={ <Navigate to="/dashboard" replace={true} /> } />
+              <Route path="/login" element={ <Auth/> } />
+              <Route element={ <Layout /> }>
+                <Route path="/" element={ <Navigate to="/login" replace={true} /> } />
                 <Route path="/dashboard" element={ <Dashboard/> } />
                 <Route path="/menu" element={ <Dashboard/> } />
                 <Route path="/bookings" element={ <Dashboard/> } />
