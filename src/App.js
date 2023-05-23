@@ -3,7 +3,7 @@ import {ThemeProvider, CssBaseline, createTheme} from "@mui/material";
 import { useSelector } from "react-redux";
 import { useMemo } from "react";
 import {Layout} from "./components";
-import {Dashboard, EditProfile, Auth } from "./pages";
+import {Dashboard, EditProfile, Auth, Restaurants} from "./pages";
 import {themeSettings} from "./theme";
 
 
@@ -27,7 +27,7 @@ function App() {
                 <Route path="/reviews" element={ <Dashboard/> } />
                 <Route path="/orders" element={ <Dashboard/> } />
                 <Route path="/delivery" element={ <Dashboard/> } />
-                <Route path="/restaurants" element={ <Dashboard/> } />
+                <Route path="/restaurants" element={ <Restaurants/> } />
                 <Route path="/edit-profile" element={ <EditProfile/> } />
             </Route>
               {/*<Route path="/dashboard" element={ <Dashboard/> } />*/}

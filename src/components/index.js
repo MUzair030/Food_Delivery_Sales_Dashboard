@@ -10,3 +10,6 @@ export { default as DeliveriesCard } from "./dashboardCards/DeliveriesCard";
 export { default as OrdersCard } from "./dashboardCards/OrdersCard";
 export { default as LoginForm } from "./LoginForm";
 export { default as SignupForm } from "./SignupForm";
+export { default as RestaurantCard } from "./restaurantCard/RestaurantCard";
+
+
