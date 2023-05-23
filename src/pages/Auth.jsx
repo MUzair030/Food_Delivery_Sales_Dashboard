@@ -2,8 +2,12 @@ import {Box, Grid, Typography} from "@mui/material";
 import {Navbar, Sidebar} from "../components";
 import {Outlet} from "react-router-dom";
 import { LoginForm, SignupForm } from "../components";
+import { useParams } from "react-router-dom";
 
 const Auth = (props) => {
+
+    const { authType } = useParams();
+    console.log({authType})
 
     return(
             <Box width="100%" height="100%" sx={{
@@ -36,8 +40,14 @@ const Auth = (props) => {
                         color: "white"
                     }}>
 
-                    {/*<LoginForm/>*/}
-                        <SignupForm/>
+                        {
+                            authType === "register" ?
+                                <SignupForm/>
+                                :
+                                <LoginForm/>
+                        }
+
+
 
 
                     </Box>

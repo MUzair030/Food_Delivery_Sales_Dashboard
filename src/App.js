@@ -18,9 +18,9 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
-              <Route path="/login" element={ <Auth/> } />
+              <Route path="/auth/:authType?" element={ <Auth/> } />
               <Route element={ <Layout /> }>
-                <Route path="/" element={ <Navigate to="/login" replace={true} /> } />
+                <Route path="/" element={ <Navigate to="/auth/login" replace={true} /> } />
                 <Route path="/dashboard" element={ <Dashboard/> } />
                 <Route path="/menu" element={ <Dashboard/> } />
                 <Route path="/bookings" element={ <Dashboard/> } />

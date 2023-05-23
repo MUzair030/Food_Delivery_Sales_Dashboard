@@ -1,7 +1,17 @@
 import {Grid, Typography, TextField, Button, Box} from "@mui/material";
+import { useNavigate } from "react-router-dom"
 
 const LoginForm = () => {
 
+    const navigate = useNavigate();
+
+    const handleLoginButton = () => {
+        navigate("/dashboard")
+    }
+
+    const handleSignupButton = () => {
+        navigate("/auth/register")
+    }
 
     return(
         <Grid container
@@ -97,7 +107,8 @@ const LoginForm = () => {
                         background: "#042241",
                         color: "white",
                         width: "100%"
-                    }}>
+                    }}
+                    onClick={handleLoginButton}>
                         <Typography>
                             Login
                         </Typography>
@@ -117,7 +128,8 @@ const LoginForm = () => {
                         background: "#042241",
                         color: "white",
                         width: "100%"
-                    }}>
+                    }}
+                    onClick={handleSignupButton}>
                         <Typography>
                             Signup
                         </Typography>
