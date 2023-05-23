@@ -34,7 +34,6 @@ const SignupForm = () => {
                     Logo Here
                     <br/>
                     <br/>
-                    <br/>
                 </Typography>
             </Grid>
             {/* Logo ends */}
@@ -65,7 +64,16 @@ const SignupForm = () => {
                     variant="standard"
                     variant="filled"
                     sx={{
-                        width:"100%"
+                        width:"100%",
+                        ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        input: {
+                            color: "black"
+                        }
                     }}
                 />
             </Grid>
@@ -81,8 +89,46 @@ const SignupForm = () => {
                     variant="standard"
                     variant="filled"
                     sx={{
-                        width:"100%"
+
+                        ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        width:"100%",
+                        input: {
+                            color: "black"
+                        }
                     }}
+
+                />
+            </Grid>
+
+            <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
+                <TextField
+                    error
+                    id="standard-error-helper-text"
+                    label="Confirm Password"
+                    type="password"
+                    // autoComplete="current-password"
+                    helperText="Incorrect entry."
+                    variant="standard"
+                    variant="filled"
+                    sx={{
+
+                        ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        width:"100%",
+                        input: {
+                            color: "black"
+                        }
+                    }}
+
                 />
             </Grid>
 
@@ -93,17 +139,22 @@ const SignupForm = () => {
                 justifyContent: "center",
                 paddingTop: "20px"
             }}>
-                {/* login button */}
+                {/* singup button */}
                 <Grid xs={10} sm={10} md={10} lg={4} xl={3}
                       sx={{
                           color: "black",
                       }}>
                     <Button sx={{
-                        background: "#042241",
+                        background: "#041E3C",
+                        // background: "#042241",
                         color: "white",
-                        width: "100%"
+                        width: "100%",
+                        '&:hover': {
+                            backgroundColor: '#349596',
+                            color: '#041E3C',
+                        },
                     }}
-                    onClick={handleSignupButton}>
+                            onClick={handleSignupButton}>
                         <Typography>
                             Signup
                         </Typography>

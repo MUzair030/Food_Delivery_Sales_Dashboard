@@ -1,5 +1,7 @@
-import {Grid, Typography, TextField, Button, Box} from "@mui/material";
+import {Grid, Typography, TextField, Button, Box, Divider} from "@mui/material";
 import { useNavigate } from "react-router-dom"
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const LoginForm = () => {
 
@@ -38,7 +40,6 @@ const LoginForm = () => {
                     Logo Here
                     <br/>
                     <br/>
-                    <br/>
                 </Typography>
             </Grid>
             {/* Logo ends */}
@@ -69,7 +70,16 @@ const LoginForm = () => {
                     variant="standard"
                     variant="filled"
                     sx={{
-                        width:"100%"
+                        width:"100%",
+                        ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        input: {
+                            color: "black"
+                        }
                     }}
                 />
             </Grid>
@@ -85,10 +95,22 @@ const LoginForm = () => {
                     variant="standard"
                     variant="filled"
                     sx={{
-                        width:"100%"
+
+                        ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                            color: "black"
+                        },
+                        width:"100%",
+                        input: {
+                            color: "black"
+                        }
                     }}
+
                 />
             </Grid>
+
 
             {/* Buttons Container / Grid */}
             <Grid container
@@ -106,7 +128,11 @@ const LoginForm = () => {
                     <Button sx={{
                         background: "#042241",
                         color: "white",
-                        width: "100%"
+                        width: "100%",
+                        '&:hover': {
+                            backgroundColor: '#349596',
+                            color: '#041E3C',
+                        },
                     }}
                     onClick={handleLoginButton}>
                         <Typography>
@@ -115,7 +141,7 @@ const LoginForm = () => {
                     </Button>
                 </Grid>
 
-                <Grid xl={1}>
+                <Grid xs={12} sm={12} md={12} xl={1}>
                     <Typography>or</Typography>
                 </Grid>
 
@@ -125,9 +151,14 @@ const LoginForm = () => {
                           color: "black",
                       }}>
                     <Button sx={{
-                        background: "#042241",
+                        background: "#041E3C",
+                        // background: "#042241",
                         color: "white",
-                        width: "100%"
+                        width: "100%",
+                        '&:hover': {
+                            backgroundColor: '#349596',
+                            color: '#041E3C',
+                        },
                     }}
                     onClick={handleSignupButton}>
                         <Typography>
@@ -136,7 +167,8 @@ const LoginForm = () => {
                     </Button>
                 </Grid>
 
-                <Grid xs={12} sm={12} md={6} lg={6} xl={6}
+                {/* Forgot pass text */}
+                <Grid xs={12} sm={12} md={12} lg={12} xl={6}
                       sx={{
                           color: "black",
                           paddingTop: "20px"
@@ -148,6 +180,80 @@ const LoginForm = () => {
                             Forgot Password?
                         </Typography>
                     </a>
+
+                </Grid>
+
+
+                {/* Google / FB Buttons */}
+                <Grid container
+                sx={{
+                    justifyContent: "center"
+                }}>
+
+                    {/* dvider */}
+                    <Grid xs={10} sm={10} md={10} lg={10} xl={10}
+                    sx={{
+                        ".css-rr7dug-MuiDivider-root": {
+                            background: "black"
+                        },
+                        paddingTop: "20px",
+                        paddingBottom: "20px",
+                    }}>
+                        <Divider />
+                    </Grid>
+
+                    {/* google */}
+                    <Grid xs={10} sm={10} md={10} lg={5} xl={5}>
+                        <Button sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "100%",
+                                lg: "90%",
+                                xl: "90%"
+                            },
+                            alignItems: "center",
+                            background: "#041E3C",
+                            color: "white",
+                            padding: "10px 20px 10px 20px",
+                            '&:hover': {
+                                backgroundColor: '#349596',
+                                color: '#041E3C',
+                            },
+                        }}>
+                            <Typography>
+                                Signup with &nbsp;
+                            </Typography>
+                            <GoogleIcon/>
+
+                        </Button>
+                    </Grid>
+
+                    {/* facebook */}
+                    <Grid xs={10} sm={10} md={10} lg={5} xl={5}>
+                        <Button sx={{
+                            width: {
+                              xs: "100%",
+                              sm: "100%",
+                              md: "100%",
+                              lg: "90%",
+                              xl: "90%"
+                            },
+                            alignItems: "center",
+                            background: "#041E3C",
+                            color: "white",
+                            padding: "10px 20px 10px 20px",
+                            '&:hover': {
+                                backgroundColor: '#349596',
+                                color: '#041E3C',
+                            },
+                        }}>
+                            <Typography>
+                                Signup with  &nbsp;
+                            </Typography>
+                            <FacebookIcon/>
+                        </Button>
+                    </Grid>
 
                 </Grid>
 
