@@ -51,7 +51,6 @@ const AddRestaurant = () => {
 
 
     return(
-        // <form onSubmit={vendorFormSubmit}>
             <Box component="form" onSubmit={vendorFormSubmit} width="100%"
                  sx={{
                      padding: "20px"
@@ -81,8 +80,8 @@ const AddRestaurant = () => {
                             {/*  Picture Dispay  */}
                             <Box>
                                 <Box component="img"
-                                     width="200px"
-                                     height="200px"
+                                     width="250px"
+                                     height="250px"
                                      sx={{
                                          borderRadius: "5%",
                                          overflow: "hidden"
@@ -141,7 +140,7 @@ const AddRestaurant = () => {
                             {/* Form Text fields left side */}
                             <Grid xs={10} sm={10} md={5} lg={5} xl={5} >
                                 <TextField
-                                    error
+                                    error={false}
                                     id="name"
                                     label="Name"
                                     helperText="Incorrect entry."
@@ -163,7 +162,7 @@ const AddRestaurant = () => {
                                 />
 
                                 <TextField
-                                    error
+                                    error={false}
                                     id="email"
                                     label="Email"
                                     helperText="Incorrect entry."
@@ -195,7 +194,7 @@ const AddRestaurant = () => {
                             {/* Form Text fields right side */}
                             <Grid xs={10} sm={10} md={5} lg={5} xl={5} >
                                 <TextField
-                                    error
+                                    error={false}
                                     id="owner-name"
                                     label="Owner Name"
                                     helperText="Incorrect entry."
@@ -218,7 +217,7 @@ const AddRestaurant = () => {
                                 />
 
                                 <TextField
-                                    error
+                                    error={false}
                                     id="phone"
                                     label="Phone Number"
                                     helperText="Incorrect entry."
@@ -280,6 +279,28 @@ const AddRestaurant = () => {
                             {/* Form Text fields right side end */}
                         </Grid>
 
+                        <TextField
+                            error={false}
+                            id="adress"
+                            label="Address"
+                            // helperText="Incorrect entry."
+                            variant="standard"
+                            variant="filled"
+                            sx={{
+
+                                ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                width:"100%",
+                                marginBottom: "10px",
+                                input: {
+                                    color: "black"
+                                }
+                            }}
+                        />
 
                         <Button type="submit"
                             sx={{
@@ -295,6 +316,7 @@ const AddRestaurant = () => {
                                 Save
                             </Typography>
                         </Button>
+
                     </Grid>
                     {/* Form Text fields + button ends */}
 
@@ -302,7 +324,6 @@ const AddRestaurant = () => {
                 {/* pic + form container ends */}
 
             </Box>
-        // </form>
 
     )
 }
