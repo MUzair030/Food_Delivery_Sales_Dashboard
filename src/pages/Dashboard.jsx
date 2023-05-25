@@ -12,8 +12,12 @@ const Dashboard = () => {
             {/*      Dashboard Cards     */}
             <Stack direction="row" gap={1} width="100%"
             sx={{
-                flexWrap: "wrap",
-
+                flexWrap: "nowrap",
+                whiteSpace: "nowrap",
+                overflowX: "auto",
+                "&::-webkit-scrollbar": {
+                display: "none"
+            }
             }}>
                 <PaymentsCard />
                 <SalesCard />
