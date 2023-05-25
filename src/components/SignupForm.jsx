@@ -5,209 +5,269 @@ const SignupForm = () => {
 
     const navigate = useNavigate();
 
-    const handleSignupButton = () => {
+    const handleSignupButton = (e) => {
+        e.preventDefault();
+        const data = {
+            email: e.target['email'].value,
+            password: e.target['password'].value,
+            confirmPassword: e.target['confirm-password'].value,
+            name: e.target['name'].value,
+            phone: e.target['phone'].value,
+        }
+        console.log("handleSignupButton", data)
         navigate("/dashboard")
     }
 
     return(
-        <Grid container
-              sx={{
-                  textAlign: "center",
-                  justifyContent: "center",
-                  width: "100%",
-                  padding: "0px",
-                  margin: "0px"
-              }}>
-
-
-            {/* Logo */}
-            <Grid xs={12} sm={12} md={12} lg={12} xl={12}
+        <Box component="form" onSubmit={handleSignupButton} width="100%">
+            <Grid container
                   sx={{
+                      textAlign: "center",
+                      justifyContent: "center",
+                      width: "100%",
                       padding: "0px",
                       margin: "0px"
                   }}>
-                <Typography sx={{
-                    color: "#042241",
-                    fontSize: "25px",
-                }}>
-                    <br/>
-                    Logo Here
-                    <br/>
-                    <br/>
-                </Typography>
-            </Grid>
-            {/* Logo ends */}
 
 
-            {/*    Login Heading  */}
-            <Grid xs={12} sm={12} md={12} lg={12} xl={12}>
-                <Typography sx={{
-                    fontSize: "20px",
-                    color: "#042241"
-                }}>
-                    Register
-                    <br/>
-                    <br/>
-                </Typography>
-            </Grid>
-            {/*    Login Heading  End */}
-
-
-            {/*    Login Form Start */}
-
-            <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
-                <TextField
-                    error
-                    id="standard-error-helper-text"
-                    label="Email"
-                    helperText="Incorrect entry."
-                    variant="standard"
-                    variant="filled"
-                    sx={{
-                        width:"100%",
-                        ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
-                            color: "black"
-                        },
-                        ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
-                            color: "black"
-                        },
-                        input: {
-                            color: "black"
-                        }
-                    }}
-                />
-            </Grid>
-
-            <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
-                <TextField
-                    error
-                    id="standard-error-helper-text"
-                    label="Password"
-                    type="password"
-                    autoComplete="current-password"
-                    helperText="Incorrect entry."
-                    variant="standard"
-                    variant="filled"
-                    sx={{
-
-                        ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
-                            color: "black"
-                        },
-                        ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
-                            color: "black"
-                        },
-                        width:"100%",
-                        input: {
-                            color: "black"
-                        }
-                    }}
-
-                />
-            </Grid>
-
-            <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
-                <TextField
-                    error
-                    id="standard-error-helper-text"
-                    label="Confirm Password"
-                    type="password"
-                    // autoComplete="current-password"
-                    helperText="Incorrect entry."
-                    variant="standard"
-                    variant="filled"
-                    sx={{
-
-                        ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
-                            color: "black"
-                        },
-                        ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
-                            color: "black"
-                        },
-                        width:"100%",
-                        input: {
-                            color: "black"
-                        }
-                    }}
-
-                />
-            </Grid>
-
-
-            <Grid container
-            sx={{
-                textAlign: "center",
-                justifyContent: "center",
-                paddingTop: "20px"
-            }}>
-                {/* singup button */}
-                <Grid xs={10} sm={10} md={10} lg={4} xl={3}
+                {/* Logo */}
+                <Grid xs={12} sm={12} md={12} lg={12} xl={12}
                       sx={{
-                          color: "black",
+                          padding: "0px",
+                          margin: "0px"
                       }}>
-                    <Button sx={{
-                        background: "#041E3C",
-                        // background: "#042241",
-                        color: "white",
-                        width: "100%",
-                        '&:hover': {
-                            backgroundColor: '#349596',
-                            color: '#041E3C',
-                        },
-                    }}
-                            onClick={handleSignupButton}>
-                        <Typography>
-                            Signup
-                        </Typography>
-                    </Button>
+                    <Typography sx={{
+                        color: "#042241",
+                        fontSize: "25px",
+                    }}>
+                        <br/>
+                        Logo Here
+                        <br/>
+                        <br/>
+                    </Typography>
                 </Grid>
-            </Grid>
+                {/* Logo ends */}
 
 
-            {/* Buttons Container / Grid */}
-            <Grid container
-                  sx={{
-                      paddingTop: "20px",
-                      textAlign: "center",
-                      justifyContent: "center",
-                      alignItems: "center"
-                  }}>
+                {/*/!*    Login Heading  *!/*/}
+                {/*<Grid xs={12} sm={12} md={12} lg={12} xl={12}>*/}
+                {/*    <Typography sx={{*/}
+                {/*        fontSize: "20px",*/}
+                {/*        color: "#042241"*/}
+                {/*    }}>*/}
+                {/*        Register*/}
+                {/*        <br/>*/}
+                {/*        <br/>*/}
+                {/*    </Typography>*/}
+                {/*</Grid>*/}
+                {/*/!*    Login Heading  End *!/*/}
 
-                <Grid xs={12} sm={12} md={7} lg={7} xl={7}
-                      sx={{
-                          color: "black",
-                          paddingTop: "20px"
-                      }}>
-                        <Typography sx={{
-                            textDecoration:"none !important",
-                            textAlign: "right"
-                        }}>
-                            Already have an account?
-                        </Typography>
+
+                {/*    Login Form Start */}
+                    <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
+                        <TextField
+                            error
+                            id="name"
+                            label="Name"
+                            helperText="Can not be Empty!"
+                            variant="standard"
+                            variant="filled"
+                            sx={{
+                                width:"100%",
+                                ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                input: {
+                                    color: "black"
+                                }
+                            }}
+                        />
+                    </Grid>
+
+                    <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
+                        <TextField
+                            error
+                            id="email"
+                            type="email"
+                            label="Email"
+                            helperText="Incorrect entry."
+                            variant="standard"
+                            variant="filled"
+                            sx={{
+                                width:"100%",
+                                ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                input: {
+                                    color: "black"
+                                }
+                            }}
+                        />
+                    </Grid>
+
+                    <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
+                    <TextField
+                        error
+                        id="phone"
+                        type="tel"
+                        label="Phone Number"
+                        helperText="Incorrect entry."
+                        variant="standard"
+                        variant="filled"
+                        sx={{
+                            width:"100%",
+                            ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                color: "black"
+                            },
+                            ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                color: "black"
+                            },
+                            input: {
+                                color: "black"
+                            }
+                        }}
+                    />
                 </Grid>
 
+                    <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
+                        <TextField
+                            error
+                            id="password"
+                            label="Password"
+                            type="password"
+                            autoComplete="current-password"
+                            helperText="Incorrect entry."
+                            variant="standard"
+                            variant="filled"
+                            sx={{
 
-                <Grid xs={12} sm={12} md={4} lg={4} xl={4}
+                                ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                width:"100%",
+                                input: {
+                                    color: "black"
+                                }
+                            }}
+
+                        />
+                    </Grid>
+
+                    <Grid xs={10} sm={10} md={8} lg={8} xl={8}>
+                        <TextField
+                            error
+                            id="confirm-password"
+                            label="Confirm Password"
+                            type="password"
+                            // autoComplete="current-password"
+                            helperText="Incorrect entry."
+                            variant="standard"
+                            variant="filled"
+                            sx={{
+
+                                ".css-1ascq1m-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                ".css-134sb7c-MuiFormLabel-root-MuiInputLabel-root.Mui-error": {
+                                    color: "black"
+                                },
+                                width:"100%",
+                                input: {
+                                    color: "black"
+                                }
+                            }}
+
+                        />
+                    </Grid>
+
+
+                    <Grid container
+                    sx={{
+                        textAlign: "center",
+                        justifyContent: "center",
+                        paddingTop: "20px"
+                    }}>
+                        {/* singup button */}
+                        <Grid xs={10} sm={10} md={10} lg={4} xl={3}
+                              sx={{
+                                  color: "black",
+                              }}>
+                            <Button sx={{
+                                background: "#041E3C",
+                                // background: "#042241",
+                                color: "white",
+                                width: "100%",
+                                '&:hover': {
+                                    backgroundColor: '#349596',
+                                    color: '#041E3C',
+                                },
+                            }}
+                                    // onClick={handleSignupButton}
+                                    type="submit"
+                                >
+                                <Typography>
+                                    Signup
+                                </Typography>
+                            </Button>
+                        </Grid>
+                    </Grid>
+                {/*    Login Form  Ends */}
+
+
+                {/* Buttons Container / Grid */}
+                <Grid container
                       sx={{
-                          color: "black",
-                          paddingTop: "20px"
+                          paddingTop: "20px",
+                          textAlign: "center",
+                          justifyContent: "center",
+                          alignItems: "center"
                       }}>
-                    <a href="#">
-                        <Typography sx={{
-                            textDecoration:"none !important",
-                            textAlign: "left"
-                        }}>
-                            &nbsp;Login Here
-                        </Typography>
-                    </a>
+
+                    <Grid xs={12} sm={12} md={7} lg={7} xl={7}
+                          sx={{
+                              color: "black",
+                              paddingTop: "20px"
+                          }}>
+                            <Typography sx={{
+                                textDecoration:"none !important",
+                                textAlign: "right"
+                            }}>
+                                Already have an account?
+                            </Typography>
+                    </Grid>
+
+
+                    <Grid xs={12} sm={12} md={4} lg={4} xl={4}
+                          sx={{
+                              color: "black",
+                              paddingTop: "20px"
+                          }}>
+                        <a href="#">
+                            <Typography sx={{
+                                textDecoration:"none !important",
+                                textAlign: "left"
+                            }}>
+                                &nbsp;Login Here
+                            </Typography>
+                        </a>
+                    </Grid>
+
                 </Grid>
+                {/* Buttons Container / Grid End */}
+
+
 
             </Grid>
-            {/* Buttons Container / Grid End */}
-
-            {/*    Login Form  Ends */}
-
-
-        </Grid>
+        </Box>
     )
 
 }

@@ -80,7 +80,10 @@ const RestaurantCard = (props) => {
                     <Button
                         sx={{
                             background: theme.palette.selectedItem.default,
-                            color: "white"
+                            color: "white",
+                            "&:hover": {
+                                background: theme.palette.hoverItem.default,
+                            }
                         }}>
                         <Typography>
                             See Menu

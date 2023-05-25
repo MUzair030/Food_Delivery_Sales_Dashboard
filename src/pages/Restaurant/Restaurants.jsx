@@ -1,8 +1,20 @@
 import {Box, Stack, Button, useTheme, Typography} from "@mui/material";
-import {RestaurantCard} from "../components";
+import {RestaurantCard} from "../../components";
+import { useNavigate } from "react-router-dom";
 
 const Restaurants = () => {
     const theme = useTheme();
+    const navigate = useNavigate();
+
+    const handleAddVendor = () => {
+        console.log("clickeddd")
+        navigate("/restaurants/add")
+    }
+
+    const handleVendorRequests = () => {
+        navigate("/restaurants/requests")
+    }
+
 
     return(
         <Box>
@@ -20,8 +32,12 @@ const Restaurants = () => {
                         sx={{
                             background: theme.palette.selectedItem.default,
                             padding: "10px",
-                            color: "white"
-                        }}>
+                            color: "white",
+                            "&:hover": {
+                                background: theme.palette.hoverItem.default,
+                            }
+                        }}
+                        onClick={handleAddVendor}>
                         <Typography>
                             Add Vendor
                         </Typography>
@@ -31,8 +47,12 @@ const Restaurants = () => {
                         sx={{
                             background: theme.palette.selectedItem.default,
                             padding: "10px",
-                            color: "white"
-                        }}>
+                            color: "white",
+                            "&:hover": {
+                                background: theme.palette.hoverItem.default,
+                            }
+                        }}
+                        onClick={handleVendorRequests}>
                         <Typography>
                             Vendor Requests
                         </Typography>

@@ -97,6 +97,9 @@ export const themeSettings = (mode) => {
                     },
                     selectedItem: {
                         default: tokensDark.red["100"]
+                    },
+                    hoverItem: {
+                        default: tokensDark.red[0]
                     }
                 }
                 : {
@@ -123,6 +126,9 @@ export const themeSettings = (mode) => {
                     },
                     selectedItem: {
                         default: tokensDark.red[0]
+                    },
+                    hoverItem: {
+                        default: tokensDark.red["100"]
                     }
                 }),
         },
