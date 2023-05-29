@@ -12,5 +12,7 @@ export { default as LoginForm } from "./LoginForm";
 export { default as SignupForm } from "./SignupForm";
 export { default as RestaurantCard } from "./restaurantCard/RestaurantCard";
 export { default as MenuCard } from "./MenuCard";
+export { default as BookingsCard } from "./BookingsCard";
+export { default as AppButton } from "./AppButton";
 
 

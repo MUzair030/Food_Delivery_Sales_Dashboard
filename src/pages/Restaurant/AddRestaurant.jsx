@@ -14,29 +14,28 @@ const AddRestaurant = () => {
     const [restaurantType, setRestaurantType] = useState('');
     const [priceCat, setPriceCat] = useState('');
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const file = event.currentTarget["fileInput"].files[0];
-
-        const formData = new FormData();
-        formData.append("file", file);
-
-        fetch("https://echo-api.3scale.net/", {
-            method: "POST",
-            body: formData
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                // setResult(data);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    };
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     const file = event.currentTarget["fileInput"].files[0];
+    //
+    //     const formData = new FormData();
+    //     formData.append("file", file);
+    //
+    //     fetch("https://echo-api.3scale.net/", {
+    //         method: "POST",
+    //         body: formData
+    //     })
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             // setResult(data);
+    //         })
+    //         .catch((error) => {
+    //             console.error(error);
+    //         });
+    // };
 
     const vendorFormSubmit = (e) => {
         e.preventDefault();
-        console.log("E :::: ", e.target )
         const data = {
             name: e.target['name'].value,
             ownerName: e.target['owner-name'].value,
