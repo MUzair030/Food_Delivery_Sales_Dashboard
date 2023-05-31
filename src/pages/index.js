@@ -7,3 +7,5 @@ export { default as RestaurantRequests } from "./Restaurant/RestaurantRequests";
 export { default as Menu } from "./Menu/Menu";
 export { default as SuperAdminMenuView } from "./Menu/SuperAdminMenuView";
 export { default as BookingsCard } from "./Bookings";
+export { default as Orders } from "./Orders";
+export { default as Deliveries } from "./Deliveries";
