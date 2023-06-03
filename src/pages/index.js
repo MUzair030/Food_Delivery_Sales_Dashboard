@@ -9,3 +9,4 @@ export { default as SuperAdminMenuView } from "./Menu/SuperAdminMenuView";
 export { default as BookingsCard } from "./Bookings";
 export { default as Orders } from "./Orders";
 export { default as Deliveries } from "./Deliveries";
+export { default as AddMenu } from "./Menu/AddMenu";

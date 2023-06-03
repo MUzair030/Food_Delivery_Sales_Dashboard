@@ -1,7 +1,7 @@
 import {Box, Button, Stack, Typography,useTheme} from "@mui/material";
 
 const AppButton = (props) => {
-        const {title, backgroundColor, hoverBackground, color, padding, handleClick} = props;
+        const {title, backgroundColor, hoverBackground, color, padding, handleClick, type} = props;
         const theme = useTheme();
     return(
         <Button
@@ -13,6 +13,7 @@ const AppButton = (props) => {
                     background: hoverBackground? hoverBackground : theme.palette.hoverItem.default,
                 }
             }}
+            type={type}
             onClick={handleClick}>
             <Typography>
                 {title? title : "no title"}

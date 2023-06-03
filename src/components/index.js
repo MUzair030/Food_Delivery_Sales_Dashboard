@@ -14,5 +14,5 @@ export { default as RestaurantCard } from "./restaurantCard/RestaurantCard";
 export { default as MenuCard } from "./MenuCard";
 export { default as BookingsCard } from "./BookingsCard";
 export { default as AppButton } from "./AppButton";
-
+export { default as AddMenuForm } from "./AddMenuForm";
 

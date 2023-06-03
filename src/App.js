@@ -12,7 +12,7 @@ import {
   AddRestaurant,
   Menu,
   Orders,
-  Deliveries
+  Deliveries, AddMenu
 } from "./pages";
 import {themeSettings} from "./theme";
 import Bookings from "./pages/Bookings";
@@ -34,6 +34,7 @@ function App() {
                 <Route path="/" element={ <Navigate to="/auth/login" replace={true} /> } />
                 <Route path="/dashboard" element={ <Dashboard/> } />
                 <Route path="/menu" element={ <Menu/> } />
+                <Route path="/menu/add" element={ <AddMenu/> } />
                 <Route path="/bookings" element={ <Bookings/> } />
                 <Route path="/reviews" element={ <Dashboard/> } />
                 <Route path="/orders" element={ <Orders/> } />
